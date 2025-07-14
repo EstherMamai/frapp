@@ -1,0 +1,14 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<h1 class="text-center">{{ title }}</h1>
+
+<img class="rounded mx-auto d-block" style="width:250px" src="{{image}}"/>
+
+<p>{{description}}</p>
+
+<div class="text-center mt-5">
+    <a href="/listing-request?new=1&listing={{name}}" class="btn btn-success">Make Offer</a>
+</div>
+
+{% endblock %}

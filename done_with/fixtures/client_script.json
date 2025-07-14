@@ -1,0 +1,13 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Client Script",
+  "dt": "Listing",
+  "enabled": 1,
+  "modified": "2025-07-10 12:12:43.098383",
+  "module": null,
+  "name": "Sample Client",
+  "script": "frappe.ui.form.on('Listing', {\n\trefresh(frm) {\n\t\tfrappe.call({\n            method: 'get_all_listings',\n            callback: function(r) {\n                console.log(r.message)\n            }  \n        });\n\n\t}\n})",
+  "view": "Form"
+ }
+]

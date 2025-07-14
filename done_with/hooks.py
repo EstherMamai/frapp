@@ -137,13 +137,11 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-# 	}
-# }
+doc_events = {
+	"user": {
+		"on_update": "done_with.done_with.service.rest.get_users"
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -242,3 +240,10 @@ app_license = "mit"
 # 	"Logging DocType Name": 30  # days to retain logs
 # }
 
+#bench export fixtures
+
+fixtures = [
+    "Client Script",
+    "Server Script"
+]
+#bench migrate
