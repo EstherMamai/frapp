@@ -247,3 +247,10 @@ fixtures = [
     "Server Script"
 ]
 #bench migrate
+
+
+jinja = {
+    "methods": [
+        "done_with.service.rest.get_all_listings"
+    ]
+}

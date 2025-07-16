@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:{MM}-{item_name}-{##}",
+ "autoname": "format:{item_name}",
  "creation": "2025-07-04 11:04:25.990935",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -22,38 +22,46 @@
  "fields": [
   {
    "fieldname": "item_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Item Name",
+   "options": "Item Sample",
    "reqd": 1
   },
   {
+   "fetch_from": "item_name.acquired_on",
    "fieldname": "acquired_on",
    "fieldtype": "Date",
    "in_filter": 1,
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Acquired On",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "item_name.price",
    "fieldname": "price",
    "fieldtype": "Currency",
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Price",
+   "read_only": 1,
    "reqd": 1
   },
   {
+   "fetch_from": "item_name.description",
    "fieldname": "description",
    "fieldtype": "Small Text",
    "label": "Description",
-   "reqd": 1
+   "read_only": 1
   },
   {
+   "fetch_from": "item_name.image",
    "fieldname": "image",
    "fieldtype": "Attach Image",
-   "label": "Image"
+   "label": "Image",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_wq9g",
@@ -98,7 +106,7 @@
  "index_web_pages_for_search": 1,
  "is_published_field": "is_published",
  "links": [],
- "modified": "2025-07-10 05:50:12.256272",
+ "modified": "2025-07-15 15:06:47.802614",
  "modified_by": "Administrator",
  "module": "Done With",
  "name": "Listing",

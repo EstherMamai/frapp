@@ -9,23 +9,23 @@
   "full_name",
   "column_break_0ieu",
   "mobile_number",
-  "offer_price",
-  "sample"
+  "offer_price"
  ],
  "fields": [
   {
    "fieldname": "full_name",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Full Name",
+   "options": "Customer",
    "reqd": 1
   },
   {
+   "fetch_from": "full_name.mobile_no",
    "fieldname": "mobile_number",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Mobile Number",
-   "reqd": 1
+   "label": "Mobile Number"
   },
   {
    "fieldname": "offer_price",
@@ -44,18 +44,13 @@
   {
    "fieldname": "column_break_0ieu",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "sample",
-   "fieldtype": "Data",
-   "label": "Fetched Sample"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2025-07-04 15:31:11.326142",
+ "modified": "2025-07-15 12:05:34.502669",
  "modified_by": "Administrator",
  "module": "Done With",
  "name": "Listing Request",
